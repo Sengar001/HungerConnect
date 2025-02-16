@@ -2,11 +2,13 @@ package com.hungerconnect.HungerConnect.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "users")
@@ -25,8 +27,11 @@ public class Users {
     @Column(name = "email", nullable = false, unique = true, length = 50)
     private String email;
 
-    @Column(name = "title", length = 20)
-    private String title;
+    @Column(name = "phone", nullable = false, unique = true, length = 10)
+    private Long phone;
+
+    @Column(name = "role", length = 20)
+    private String role;
 
     @Column(name = "password", nullable = false, length = 100)
     private String password;

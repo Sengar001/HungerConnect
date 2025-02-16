@@ -9,9 +9,11 @@ public record UserResponse(
         String firstName,
         @JsonProperty("last_name")
         String lastName,
+        @JsonProperty("phone")
+        Long phone,
         @JsonProperty("email")
         String email,
-        @JsonProperty("title")
-        String title
+        @JsonProperty("role")
+        String role
 ) {
 }

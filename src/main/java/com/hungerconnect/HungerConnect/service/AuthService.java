@@ -1,5 +1,6 @@
 package com.hungerconnect.HungerConnect.service;
 
+import com.hungerconnect.HungerConnect.dto.UserRequest;
 import com.hungerconnect.HungerConnect.entity.Users;
 import com.hungerconnect.HungerConnect.loginhelper.EncryptionService;
 import com.hungerconnect.HungerConnect.loginhelper.JWThelper;
@@ -17,7 +18,13 @@ public class AuthService {
     private final UserRepo userRepo;
     private final EncryptionService encryptionService;
     private final JWThelper jwThelper;
-//    private final UserMaper userMaper;
+    private final UserMaper userMaper;
+
+    public String createUser(UserRequest userRequest) {
+        Users newUser = userMaper.toEntity(userRequest);
+        userRepo.save(newUser);
+        return "User created";
+    }
 
     public Users retrieveUser(String email) {
         return userRepo.findByEmail(email)
@@ -31,7 +38,5 @@ public class AuthService {
         }
 
         return jwThelper.generateToken(username);
-//        hell i am sengar
-//        hello i am sengar
     }
 }
