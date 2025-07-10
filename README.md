@@ -96,19 +96,5 @@ Hunger-Connect/
 ## 🌍 Live Demo
 🔗 https://hungerconnect.vercel.app
 
-## 📸 Screenshots
-You can add GIFs or screenshots here showcasing:
-
-- ### Donation form
-  <img src="./src/assets/cdGif.gif" height="300"/>
-
-- ### Blog post flow
-  <img src="./src/assets/cbGif.gif" height="300"/>
-
-- ### NGO dashboard
-  <img src="./src/assets/sdGif.gif" height="300"/>
-
----
-
 ### 💡 Inspiration
 This project is inspired by the global challenge of **food waste** and the mission to ensure **zero hunger** for everyone. Built with the intent to make food distribution faster, smarter, and more equitable.
